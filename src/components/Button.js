@@ -17,12 +17,15 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
   return (
     <Link to="/sign-up" className="btn-mobile">
-      <button>{children}</button>
-      <Button
+      <button
         className={`btn ${checkButtonStyle} ${checkButtonSize}`}
         onClick={onClick}
         type={type}
-      ></Button>
+      >
+        {children}
+      </button>
     </Link>
   );
 };
+
+export default Button;
